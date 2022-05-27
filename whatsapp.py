@@ -6,15 +6,13 @@ with open("private.json") as private:
 
 account_sid = credentials["account_sid"]
 auth_token = credentials["auth_token"]
-messaging_sid = credentials["messaging_sid"]
-number = credentials["phone_number"]
-
 client = Client(account_sid, auth_token)
 
 message = client.messages.create(
-    messaging_service_sid=messaging_sid,
-    body="Testing from Jamil!!",
-    to=number
+    # twilio's whatsapp number below
+    from_='whatsapp:+14155238886',
+    body='Your appointment is coming up on July 21 at 3PM',
+    to='whatsapp:+{}'.format(credentials["phone_number"])
 )
 
 print(message.sid)
