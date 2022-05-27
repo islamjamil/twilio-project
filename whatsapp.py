@@ -12,7 +12,7 @@ message = client.messages.create(
     # twilio's whatsapp number below
     from_='whatsapp:+14155238886',
     body='Your appointment is coming up on July 21 at 3PM',
-    to='whatsapp:+{}'.format(credentials["phone_number"])
+    to=F'whatsapp:+{credentials["phone_number"]}'
 )
 
 print(message.sid)
