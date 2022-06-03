@@ -14,7 +14,9 @@ client = Client(account_sid, auth_token)
 message = client.messages.create(
     messaging_service_sid=messaging_sid,
     body="Testing from Jamil!!",
-    to=number
+    to=number,
+    # mount rainier
+    media_url="https://upload.wikimedia.org/wikipedia/commons/e/eb/Mount_Rainier_from_west.jpg"
 )
 
 print(message.sid)
