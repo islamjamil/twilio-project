@@ -1,3 +1,4 @@
 private.json
 *.txt
 .DS_Store
+requirements.txt

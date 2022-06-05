@@ -16,7 +16,7 @@ message = client.messages.create(
     body="Testing from Jamil!!",
     to=number,
     # mount rainier
-    media_url="https://upload.wikimedia.org/wikipedia/commons/e/eb/Mount_Rainier_from_west.jpg"
+    # media_url="https://upload.wikimedia.org/wikipedia/commons/e/eb/Mount_Rainier_from_west.jpg"
 )
 
 print(message.sid)
